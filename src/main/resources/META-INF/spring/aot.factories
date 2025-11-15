@@ -1,0 +1,10 @@
+# HiSQL GraalVM Native Image AOT Configuration
+# This file registers AOT processors for automatic reflection hints generation
+
+# AOT Processor for Bean Factory Initialization
+org.springframework.beans.factory.aot.BeanFactoryInitializationAotProcessor=\
+pers.clare.hisql.aot.HiSqlRuntimeHints
+
+# Runtime Hints Registrar (if needed for additional hints)
+org.springframework.aot.hint.RuntimeHintsRegistrar=\
+pers.clare.hisql.aot.HiSqlRuntimeHints

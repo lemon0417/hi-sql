@@ -3,10 +3,10 @@ package pers.clare.hisql.util;
 import pers.clare.hisql.naming.NamingStrategy;
 import pers.clare.hisql.store.FieldColumn;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Transient;
+import jakarta.persistence.Column;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.Transient;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 import java.util.*;

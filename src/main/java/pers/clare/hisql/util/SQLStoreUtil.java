@@ -7,7 +7,7 @@ import pers.clare.hisql.store.FieldColumn;
 import pers.clare.hisql.store.SQLCrudStore;
 import pers.clare.hisql.store.SQLData;
 
-import javax.persistence.Column;
+import jakarta.persistence.Column;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;

@@ -2,7 +2,7 @@ package pers.clare.hisql.data.entity;
 
 import lombok.*;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @ToString
 @Getter

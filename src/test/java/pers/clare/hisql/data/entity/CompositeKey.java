@@ -5,9 +5,9 @@ import lombok.Setter;
 import lombok.experimental.Accessors;
 import org.springframework.core.annotation.Order;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import java.io.Serializable;
 
 @Getter

@@ -12,7 +12,7 @@ import pers.clare.hisql.util.ClassUtil;
 import pers.clare.hisql.util.FieldColumnFactory;
 import pers.clare.hisql.util.SQLQueryUtil;
 
-import javax.persistence.Table;
+import jakarta.persistence.Table;
 import java.io.InputStream;
 import java.lang.reflect.Field;
 import java.util.Map;

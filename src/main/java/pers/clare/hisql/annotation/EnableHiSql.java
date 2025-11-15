@@ -1,5 +1,6 @@
 package pers.clare.hisql.annotation;
 
+import org.springframework.aot.hint.annotation.RegisterReflectionForBinding;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.core.annotation.AliasFor;
@@ -57,5 +58,25 @@ public @interface EnableHiSql {
     Class<? extends CommandTypeParser> commandTypeParser() default CommandTypeParser.class;
 
     Class<? extends SQLRepositoryFactoryBean> factoryBean() default SQLRepositoryFactoryBean.class;
+
+    /**
+     * Entity classes for GraalVM Native Image support.
+     *
+     * <p>Explicitly register entity classes to ensure reflection hints are generated
+     * for Native Image compilation. This is optional if your entities are annotated
+     * with {@code @Entity}, as they will be auto-scanned by the AOT processor.
+     *
+     * <p>Example:
+     * <pre>{@code
+     * @EnableHiSql(entities = {User.class, Product.class, Order.class})
+     * public class HiSqlConfig {
+     * }
+     * }</pre>
+     *
+     * @return array of entity classes
+     * @since 2.0.0
+     */
+    @RegisterReflectionForBinding
+    Class<?>[] entities() default {};
 
 }
